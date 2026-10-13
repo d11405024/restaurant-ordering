@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>饌味軒 ZUN WEI XUAN ｜ 線上點餐</title>
+<meta name="description" content="饌味軒 — 一碗麵的溫度，一桌菜的記憶。瀏覽菜單、線上點餐、外送到府。">
+<meta name="theme-color" content="#b3341f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍜</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#menu">跳到菜單</a>
+
+<!-- ══════════ 導覽列 ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34"><path d="M8 20h24c0 8-5 14-12 14S8 28 8 20z" fill="currentColor" opacity=".9"/><path d="M6 16h28v3H6z" fill="currentColor"/><path d="M14 9c0-2 2-2 2-4M20 9c0-2 2-2 2-4M26 9c0-2 2-2 2-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      </span>
+      <span class="brand__text">
+        <strong>饌味軒</strong>
+        <small>ZUN WEI XUAN</small>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="主要導覽">
+      <a href="#menu">菜單</a>
+      <a href="#gallery">相簿</a>
+      <a href="#about">關於我們</a>
+      <a href="#contact">聯絡資訊</a>
+    </nav>
+
+    <button class="cart-btn" id="cartBtn" aria-label="開啟購物車">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+      <span class="cart-btn__label">購物車</span>
+      <span class="cart-btn__count" id="cartCount" aria-hidden="true" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ 主視覺 ══════════ -->
+  <section class="hero">
+    <img class="hero__img" src="images/hero-dining.jpg" alt="饌味軒餐廳用餐區，暖黃燈光下的餐桌擺盤" width="900" height="600">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">自 2014 年 · 台北信義</p>
+      <h1 class="hero__title">一碗麵的溫度<br>一桌菜的記憶</h1>
+      <p class="hero__desc">
+        以手工現拉麵、慢燉牛腱與每日現做小菜，
+        端出一桌值得好好坐下來吃的家常料理。
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="#menu">開始點餐</a>
+        <a class="btn btn--ghost btn--lg" href="#gallery">看看料理</a>
+      </div>
+      <ul class="hero__facts">
+        <li><strong>4.8</strong><span>Google 評分</span></li>
+        <li><strong>30<small>分</small></strong><span>外送免費</span></li>
+        <li><strong>每日</strong><span>現做不隔夜</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ 菜單 ══════════ -->
+  <section class="section" id="menu">
+    <div class="section__head">
+      <p class="eyebrow">OUR MENU</p>
+      <h2>今日菜單</h2>
+      <p class="section__sub">所有價格含服務費前，結帳時將一併計算服務費。</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="菜單分類">
+      <!-- 由 app.js 產生 -->
+    </div>
+
+    <div class="menu-grid" id="menuGrid" aria-live="polite">
+      <!-- 由 app.js 產生 -->
+    </div>
+
+    <p class="menu-empty" id="menuEmpty" hidden>此分類目前沒有餐點。</p>
+  </section>
+
+  <!-- ══════════ 相簿 ══════════ -->
+  <section class="section section--alt" id="gallery">
+    <div class="section__head">
+      <p class="eyebrow">GALLERY</p>
+      <h2>本店風光</h2>
+      <p class="section__sub">主廚每日 09:00 開始備料，以下為近期實拍。</p>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item gallery__item--wide">
+        <img src="images/hero-dining.jpg" alt="餐廳主用餐區，吧台與餐桌" loading="lazy" width="900" height="600">
+        <figcaption>二樓用餐區，採自然光與暖色燈具</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-beef-noodle-soup.jpg" alt="招牌牛肉麵" loading="lazy" width="900" height="900">
+        <figcaption>招牌牛肉麵 · 慢燉 6 小時</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-salt-pepper-chicken.jpg" alt="台式鹽酥雞" loading="lazy" width="900" height="600">
+        <figcaption>台式鹽酥雞 · 現炸上桌</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--tall">
+        <img src="images/dish-pan-seared-salmon.jpg" alt="香煎鮭魚" loading="lazy" width="900" height="1200">
+        <figcaption>香煎鮭魚 · 佐莎莎</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-seafood-fried-rice.jpg" alt="蝦仁蛋炒飯" loading="lazy" width="900" height="600">
+        <figcaption>蝦仁蛋炒飯 · 鑊氣十足</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-shrimp-ramen.jpg" alt="鮮蝦荷包蛋拉麵" loading="lazy" width="900" height="900">
+        <figcaption>鮮蝦荷包蛋拉麵</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-miso-ramen.jpg" alt="味噌豚骨拉麩定食" loading="lazy" width="900" height="1200">
+        <figcaption>味噌豚骨拉麩定食</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-ribeye-steak.jpg" alt="炙烤肋眼牛排" loading="lazy" width="900" height="600">
+        <figcaption>炙烤肋眼牛排 200g</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-chow-mein.jpg" alt="港式豉油炒麵" loading="lazy" width="900" height="750">
+        <figcaption>港式豉油炒麵</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dish-avocado-salad.jpg" alt="酪梨時蔬沙拉" loading="lazy" width="900" height="600">
+        <figcaption>酪梨時蔬沙拉</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <img src="images/dessert-raspberry-cake.jpg" alt="覆盆子乳酪蛋糕" loading="lazy" width="900" height="900">
+        <figcaption>覆盆子乳酪蛋糕</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════ 關於我們 ══════════ -->
+  <section class="section" id="about">
+    <div class="about">
+      <div class="about__text">
+        <p class="eyebrow">ABOUT US</p>
+        <h2>關於饌味軒</h2>
+        <p>
+          2014 年，我們在信義路邊的老大樓開了一間只有八個座位的小店。
+          當時只有一口鍋、一台製麵機，和一份「麵要每天現做」的堅持。
+        </p>
+        <p>
+          十年過去，座位數到六十，菜單從十二道變成二十幾道，
+          但那台製麵機還在。牛腱一樣慢燉六小時，小菜一樣當天不隔夜。
+        </p>
+        <ul class="about__stats">
+          <li><strong>2014</strong><span>創業年份</span></li>
+          <li><strong>6<small>hr</small></strong><span>牛腱慢燉</span></li>
+          <li><strong>60</strong><span>座位數</span></li>
+        </ul>
+      </div>
+      <div class="about__media">
+        <img src="images/dish-miso-ramen.jpg" alt="味噌豚骨拉麩定食，飄著熱氣的一道料理" loading="lazy" width="900" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 聯絡資訊 ══════════ -->
+  <section class="section section--alt" id="contact">
+    <div class="section__head">
+      <p class="eyebrow">CONTACT</p>
+      <h2>聯絡資訊</h2>
+    </div>
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>訂位專線</h3>
+        <p class="info-card__big">02-2765-8800</p>
+        <p>每日 11:00 – 21:00 可電話訂位，接受 2 人以上團體訂位。</p>
+      </article>
+      <article class="info-card">
+        <h3>店址</h3>
+        <p class="info-card__big">台北市信義區<br>松智路 168 號 2 樓</p>
+        <p>捷運板南線市政府站 3 號出口，步行約 5 分鐘。</p>
+      </article>
+      <article class="info-card">
+        <h3>營業時間</h3>
+        <p class="info-card__big">11:00 – 14:30<br>17:00 – 21:30</p>
+        <p>最後入場 21:00，週一公休（若遇國定假日順延）。</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════ 頁尾 ══════════ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <strong class="footer__brand">饌味軒 ZUN WEI XUAN</strong>
+      <p>台北市信義區松智路 168 號 2 樓 ｜ 02-2765-8800</p>
+    </div>
+    <p class="footer__note">
+      圖片來源：<a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>（依 Unsplash License 使用）<br>
+      本網站為作品集／教學用途之示範專案。
+    </p>
+  </div>
+</footer>
+
+<!-- ══════════ 購物車抽屜 ══════════ -->
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="cart" id="cart" aria-labelledby="cartTitle" aria-modal="true" role="dialog" hidden>
+  <header class="cart__head">
+    <h2 id="cartTitle">你的訂單</h2>
+    <button class="icon-btn" id="cartClose" aria-label="關閉購物車">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </header>
+
+  <div class="cart__body" id="cartBody">
+    <ul class="cart__list" id="cartList"></ul>
+    <p class="cart__empty" id="cartEmpty">
+      <span aria-hidden="true">🍽️</span>
+      購物車還是空的<br><small>從菜單挑選你喜歡的料理吧</small>
+    </p>
+  </div>
+
+  <footer class="cart__foot" id="cartFoot" hidden>
+    <form class="checkout" id="checkoutForm" novalidate>
+      <fieldset class="field-row">
+        <legend>取貨方式</legend>
+        <label class="chip"><input type="radio" name="fulfil" value="delivery" checked><span>外送</span></label>
+        <label class="chip"><input type="radio" name="fulfil" value="pickup"><span>自取</span></label>
+      </fieldset>
+
+      <div class="field-row" id="addressField">
+        <label for="address">外送地址</label>
+        <input type="text" id="address" name="address" placeholder="例：台北市信義區市府路 1 號 101 室" autocomplete="street-address">
+      </div>
+
+      <div class="field-grid">
+        <div class="field-row">
+          <label for="custName">姓名 <b aria-hidden="true">*</b></label>
+          <input type="text" id="custName" name="custName" placeholder="王小明" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <label for="custPhone">電話 <b aria-hidden="true">*</b></label>
+          <input type="tel" id="custPhone" name="custPhone" placeholder="0912345678" autocomplete="tel" inputmode="numeric" required>
+        </div>
+      </div>
+
+      <fieldset class="field-row">
+        <legend>付款方式</legend>
+        <label class="chip"><input type="radio" name="pay" value="cash" checked><span>現金</span></label>
+        <label class="chip"><input type="radio" name="pay" value="card"><span>信用卡</span></label>
+        <label class="chip"><input type="radio" name="pay" value="transfer"><span>轉帳</span></label>
+      </fieldset>
+
+      <div class="field-row">
+        <label for="note">備註</label>
+        <textarea id="note" name="note" rows="2" placeholder="例：不要辣、餐具自備、加飯"></textarea>
+      </div>
+
+      <p class="form-error" id="formError" hidden></p>
+
+      <dl class="totals">
+        <div><dt>餐點小計</dt><dd id="sumSub">NT$0</dd></div>
+        <div><dt>服務費（10%）</dt><dd id="sumService">NT$0</dd></div>
+        <div id="rowDelivery"><dt>外送費</dt><dd id="sumDelivery">NT$0</dd></div>
+        <div class="totals__grand"><dt>應付總計</dt><dd id="sumTotal">NT$0</dd></div>
+      </dl>
+      <p class="free-hint" id="freeHint" hidden></p>
+
+      <button type="submit" class="btn btn--primary btn--block btn--lg" id="submitBtn">送出訂單</button>
+    </form>
+  </footer>
+</aside>
+
+<!-- ══════════ 訂單完成 ══════════ -->
+<div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" hidden>
+  <div class="modal__card">
+    <div class="modal__icon" aria-hidden="true">✓</div>
+    <h2 id="successTitle">訂單已送出！</h2>
+    <p class="modal__no">訂單編號 <strong id="orderNo">—</strong></p>
+    <p id="orderMsg" class="modal__msg"></p>
+    <dl class="modal__sum" id="orderSum"></dl>
+    <button class="btn btn--primary btn--block" id="successClose">回到菜單</button>
+  </div>
+</div>
+
+<!-- ══════════ 購物車小視窗提示 ══════════ -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
